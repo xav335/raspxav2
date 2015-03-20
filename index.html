@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>X1 Media Player</title> 
+	<meta name="Description" content="X1 Media Player" />
+	<meta charset="utf-8">
+	<meta name="Author" content="Johannes Beck - mail@johannes-beck.name" />
+	<meta name="Robots" content="index,follow" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" type="text/css" href="jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="jquery.mobile.simpledialog.min.css" /> 
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="mediaplayer.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="jquery.json-2.3.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile.simpledialog2.min.js"></script>  
+</head> 
+<body>
+	<div id="browse-page" data-role="page">
+		<script type="text/javascript">
+		$(document).bind('pageinit', function() {
+			client.initPage();
+		});
+		</script>	
+		
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<a id="home" href="#" data-icon="home">Servers</a>
+			<h1 id="status-info-text">X1 Media Player</h1>
+			<a id="player" href="player.html" data-icon="gear" data-theme="b">Player</a>
+		</div>
+
+		<div data-role="content">
+			<h1 id="title">Media Servers</h1>
+			<ul id="servers" data-role="listview" data-inset="true" data-filter="true">
+			</ul>
+			<div id="search-box" data-role="fieldcontain">
+				<input type="text" data-mini="true" id="search-text"/>
+				<a id="search" href="#" data-role="button" data-inline="true" data-icon="search" >Search</a>
+			</div>
+		</div>
+	
+		<div data-inline="true" data-position-to="window" data-role="popup" data-history="false" data-overlay-theme="a" data-theme="e" class="ui-content" id="message-browser" data-transition="flip">
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<h4><a href="http://www.x1/">X1 Media Player</a> &copy; 2012 </h4>
+		</div> 
+	</div>
+</body>
+</html> 

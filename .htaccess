@@ -1,0 +1,7 @@
+DirectoryIndex index.html
+RewriteEngine On
+# RewriteBase /
+RewriteBase /omxplayer-ui
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
